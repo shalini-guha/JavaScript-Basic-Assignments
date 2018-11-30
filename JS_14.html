@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+    <script>
+    function largeImg(myImage){
+        myImage.style.height = "64px";
+        myImage.style.width = "64px";
+    }
+    function normalImg(myImage){
+        myImage.style.height = "32px";
+        myImage.style.width = "32px";
+    }
+    </script>
+    <body>
+    <img onmouseover = "largeImg(this)" onmouseout = "normalImg(this)" src = "smiley.jpg" alt = "Smiley" height = "32" width= "32">
+    </body>
+</html>

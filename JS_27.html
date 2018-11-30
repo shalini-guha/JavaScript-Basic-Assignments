@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<script type = "text/javascript">
+function display(){
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    var s = d.getSeconds();
+    var date = d.getDate();
+    var month = d.getMonth();
+    var year = d.getFullYear();
+    var dt =date +"/"+month+"/"+year;
+    document.getElementById('txt').innerHTML = h + ":" +m +":"+ s;
+    document.getElementById('txt1').innerHTML = dt;
+    
+    var t = setTimeout(display,500);
+}    
+</script>
+    <body onload ="display()">
+     <div id = "txt"></div><br>
+        <div id = "txt1"></div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<script type="text/javascript">
+    function validate(){
+        var name  = document.forms["form1"]["name"].value;
+        var id = document.forms["form1"]["id"].value;
+        var idpat =/^[0-9]{4}/;
+        if(name=="" || id=="")
+            {
+                alert("Please enter both name and ID");
+            }
+        else if(id.match(idpat)==id){
+                alert("Form Validated");
+            }
+            else
+            {
+                alert("Please enter a 4 digit numeric ID only");
+            }
+    }
+</script>
+<body>
+    <form id ="form1" method="post">
+    Name : <input type = "text" name = "name">
+    ID : <input type = "text" name = "id">
+    <input type = "button" value = "Validate" onclick ="validate()">
+    </form>
+</body>
+</html>

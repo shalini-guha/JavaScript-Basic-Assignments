@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <script type ="text/javascript">
+        function add(){
+            var a = document.forms["form1"]["no1"].value;
+            var b = document.forms["form1"]["no2"].value;
+            var result = parseInt(a)+parseInt(b);
+            document.forms["form1"]["total"].value = result;
+        }
+        function sub(){
+            var a = document.forms["form1"]["no1"].value;
+            var b = document.forms["form1"]["no2"].value;
+            var result = parseInt(a)-parseInt(b);
+            document.forms["form1"]["total"].value = result;
+        }
+        function mult(){
+            var a = document.forms["form1"]["no1"].value;
+            var b = document.forms["form1"]["no2"].value;
+            var result = parseInt(a)*parseInt(b);
+            document.forms["form1"]["total"].value = result;
+        }
+        function modu(){
+            var a = document.forms["form1"]["no1"].value;
+            var b = document.forms["form1"]["no2"].value;
+            var result = parseInt(a)%parseInt(b);
+            document.forms["form1"]["total"].value = result;
+        }
+    </script>
+    <form id = "form1" method ="post">
+        Enter the 1st Number : <input type = "text" name ="no1"><br><br>
+        Enter the 2nd Number : <input type = "text" name ="no2"><br><br>
+        Result: <input type="text" name="total"> <br><br>
+        <input type ="button" value="Add" onclick="add()">
+        <input type ="button" value="Sub" onclick="sub()">
+        <input type ="button" value="Mult" onclick="mult()">
+        <input type ="button" value="Mod" onclick="modu()">
+     </form>
+</html>

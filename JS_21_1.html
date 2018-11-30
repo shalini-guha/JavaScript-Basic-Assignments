@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <script>
+    function largeImg(){
+        var myImage = document.getElementById("myImg");
+        var h = document.forms["form1"]["h"].value;
+        var w = document.forms["form1"]["w"].value;
+        myImage.style.height = h;
+        myImage.style.width = w;
+    }
+    </script>
+    <body>
+    <img src = "smiley.jpg" alt = "Smiley" height = "32" width= "32" id="myImg">
+    <form id ="form1" method="post">
+    Height : <input type = "text" name = "h">
+    Width : <input type = "text" name = "w">
+    <input type = "button" value = "Resize" onclick ="largeImg()">
+    </form>
+    </body>
+</html>

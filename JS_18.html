@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <script type = "text/javascript">
+    function validate(){
+        var number = document.getElementById("phno").value;
+        var email = document.getElementById("email").value;
+        var phoneno = /^\+?([7-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+        var emailid = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        if(number.length>10)
+        {
+            alert("Invalid Phone Number");
+            return false;
+        }
+        else if(number.match(phoneno))
+            {
+                alert("Valid Phone Number");
+                
+                if(email.match(emailid))
+            {
+                alert("Valid Email ID");
+                return true;
+            }
+        else 
+        {
+            alert("Invalid Email ID");
+            return false;
+        }
+            }
+        else 
+        {
+            alert("Invalid Phone Number");
+            return false;
+        }
+        
+    }
+    </script>
+    <body>
+    Enter a phone number : <input type = "text" id = "phno">
+    Enter an E-Mail ID : <input type = "text" id = "email">
+    <input type ="button" value="Validate" onclick="return validate()">
+    </body>
+</html>

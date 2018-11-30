@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<script>
+    function ValidateForm(){
+        var name = document.forms["form1"]["fname"].value;
+        if(name == "")
+            alert("Please Enter your name");
+            return false;
+    }
+    
+    </script>
+    <body>
+        <form id = "form1" onsubmit ="return ValidateForm()" method = post>
+        Name : <input type = "text" name = "fname">
+        <input type = submit value = "Submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<script type = "text/javascript">
+function reverse(){
+    var number = prompt("Enter the number to be reversed:");
+    var rev=0,rem=0;
+    var numpat = /^[0-9]+$/;
+    if(number.match(numpat)!=number)
+        {
+            alert("Invalid  Number");
+        }
+    else{
+    number = parseInt(number);
+    while(number>0){
+        rem = number % 10;
+        rev  = rev*10 + rem;
+        number=Math.floor(number/10);
+    }
+    alert("The reversed number is: "+rev);
+}
+    
+}    
+</script>
+    <body onload = "reverse()"></body>
+</html>
